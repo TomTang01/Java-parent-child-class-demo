@@ -1,0 +1,13 @@
+FSComponent[] tempArray = new FSComponent[componentArray.length];
+        //enter the elements 1 by 1 first into a temporary array,
+        //then change the reference of the instance componentArray 
+        //to the temporary array
+        for(int i=0; i<componentArray.length; ++i)
+        {
+            tempArray[i] = componentArray[i];
+            if(!componentArray[i].getName().endsWith(".zip"))
+            {
+                tempArray[i].setName(tempArray[i].getName() + ".zip");
+            }
+        }
+        this.componentArray = tempArray;
